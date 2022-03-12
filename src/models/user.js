@@ -14,10 +14,9 @@ const UserSchema=new mongoose.Schema({
     question_validated:[{type:mongoose.Types.ObjectId,ref:"questions"}],
     subject:[{type:mongoose.Types.ObjectId,ref:"subjects"}],
     document:{type:String,required:true},
-    isExpert:{type:Boolean},
-    isVarified:{type:Boolean},
+    isExpert:{type:Boolean,default:false},
+    isVarified:{type:Boolean,default:false},
     branch:{type:String,required:true},
-    university:{type:String,required:true},
 },{
     timestamps:true,
 });
