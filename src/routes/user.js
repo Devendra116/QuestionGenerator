@@ -1,27 +1,20 @@
 //Library
 import express from "express";
-import jwt from "jsonwebtoken"
-import cookieParser from "cookie-parser"
+import jwt from "jsonwebtoken";
+import cookieParser from "cookie-parser";
 
 // models
 import { UserModel } from "../models/user";
 
+// Authorisation
+import isAuth from "../isauth";
+
 const Router = express.Router();
 Router.use(cookieParser())
 
-function isAuth (req, res, next){
-  console.log("in isauth");
-  const token=req.cookies.jwt
-  
-  if(token === null) return res.sendStatus(401);
-  jwt.verify(token, 'Quesio8bit',(err,user)=>{
-    if(err) return res.sendStatus(403)
-    req.mytoken=token
-    next()
-  })
-};
 
-Router.get('/as',(req,res)=>{
+
+Router.get('/as',isAuth,(req,res)=>{
     // res.json({token: req.mytoken})
     res.render('home')
 })

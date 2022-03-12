@@ -12,6 +12,9 @@ import ConnectDB from './db/connection';
 // Routes
 import Login from './routes/user';
 import Register from './routes/register';
+import Questions from './routes/questions'
+
+// Schemas
 import { UserModel } from './models/user';
 import { QuestionModel } from './models/question';
 
@@ -50,6 +53,7 @@ app.get('/', async (req, res) => {
 // Microservices
 app.use('/login', Login);
 app.use('/register', Register);
+app.use('/questions',Questions);
 
 app.listen(process.env.PORT, () =>
   ConnectDB()
