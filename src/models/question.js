@@ -4,7 +4,7 @@ const QuestionSchema=new mongoose.Schema({
     options:[{type:String,required:true}],
     correct_options:[{type:String,required:true}],
     difficulty:{type:String,required:true},
-    isValid:{type:Boolean},
+    isValid:{type:Boolean,default:false},
     subject:{type:String,required:true},
     chapter:{type:String,required:true},
     university:{type:String,required:true},
