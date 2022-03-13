@@ -158,11 +158,11 @@
     })
     
     const subject = document.getElementById('subject-name');
-    subject.value = <%= questionData.subject %>
+    subject.value = '<%= questionData.subject %>'
 
     const chapter = document.getElementById('chapter-name');
-    chapter.value = <%= questionData.chapter %>
-
+    chapter.value = '<%= questionData.chapter %>'
+    
     for(let i = 1;i<=3;i++){
       if(document.getElementById(`${i}`).value === '<%= questionData.difficulty %>'){
         document.getElementById(`${i}`).checked = true
