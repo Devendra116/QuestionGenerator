@@ -5,185 +5,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FOI App Landing Page</title>
+    <title>Quesio | Sign Up</title>
     <link rel="stylesheet" href="assets/vendors/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/Q.ico">
 </head>
 
-<body>
-    <header class="foi-header">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light foi-navbar">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.svg" alt="FOI">
-                </a>
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="features.html">Features</a>
-                        </li>
-                        <li class="nav-item active dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                            <div class="dropdown-menu" aria-labelledby="pagesMenu">
-                                <a class="dropdown-item" href="blog.html">Blog</a>
-                                <a class="dropdown-item" href="login.html">Login</a>
-                                <a class="dropdown-item" href="register.html">Register <span class="sr-only">(current)</span></a>
-                                <a class="dropdown-item" href="faq.html">FAQ</a>
-                                <a class="dropdown-item" href="404.html">404</a>
-                                <a class="dropdown-item" href="careers.html">Careers</a>
-                                <a class="dropdown-item" href="blog-single.html">Single blog</a>
-                                <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">contact</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav mt-2 mt-lg-0">
-                        <li class="nav-item mr-2 mb-3 mb-lg-0">
-                            <a class="btn btn-secondary" href="register.html">Sign up</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-secondary" href="login.html">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+<body style="overflow-x:hidden; background-image: linear-gradient(45deg, #c395e5,  #6206a8);">
 
-    <main class="page-auth">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <section class="auth-wrapper">
-                        <div class="row">
-                            <div class="col-md-6 mb-4 mb-md-0">
-                                <h2 class="auth-section-title">Create account</h2>
-                                <p class="auth-section-subtitle">Create your account to continue.</p>
-                                <form action="/register" method="POST">
-                                    <div class="form-group">
-                                        <label for="us">Name <sup>*</sup></label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email <sup>*</sup></label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password <sup>*</sup></label>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="confirmPassword">Confirm Password <sup>*</sup></label>
-                                        <input type="password" class="form-control" id="confirmPassword" name="confirmpassword" placeholder="Confirm Password">
-                                    </div>
-                                    <button class="btn btn-primary btn-auth-submit" type="submit">Create account</button>
-                                </form>
-                                <p class="mb-0">
-                                    <a href="login.html" class="text-dark font-weight-bold">Already have an acocunt? Sign in</a>
-                                </p>
-                            </div>
-                            <div class="col-md-6 d-flex align-items-center">
-                                <img src="assets/images/Register.png" alt="login" class="img-fluid">
+    <div class="row">
+        <div class="col-lg-9 mx-auto border border-light rounded-lg pt-4 mx-5 my-5 shadow-lg bg-white">
+            <div class="card-body">
+                <div class="row w-300">
+                    <div class="col-md-2 mb-4">
+                        <button type="button" class="btn btn-primary btn-rounded btn-icon" style="padding: 12%; ">
+                            <a href="/">
+                                <img src="assets\images\home.png" style="height: 24px;" alt="App store"></a>
+                        </button>
+                    </div>
+                    <div class="col-md-10" style="padding-left: 265px;">
+                        <h1 class="auth-section-title mt-3" style="font-size: xx-large">Register Here !</h1>
+                    </div>
+                </div>
+                <p class="auth-section-subtitle text-center">Create Your Account To Contribute.
+                </p>
+                <form action="/register" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="name">Full Name : <sup>*</sup></label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Name Surname" required>
+                                </div>
                             </div>
                         </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </main>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="email">Email ID : <sup>*</sup></label>
+                                <div class="col-md-9">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="support@quesio.com" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="phoneno">Phone No. : <sup>*</sup></label>
+                                <div class="col-md-9">
+                                    <input type="number" class="form-control" id="phoneno" name="phoneno"
+                                        placeholder="912345XXXX" required maxlength="10">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row ">
+                                <label class="col-md-3 col-form-label" for="university">University :
+                                    <sup>*</sup></label>
+                                <div class="col-md-9">
+                                    <select class="custom-select text-muted" id="university" name="university"
+                                        style="height: 3.5rem; padding-left: 30px;" required>
+                                        <option value="">Choose University</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="college">College : <sup>*</sup></label>
+                                <div class="col-md-9">
+                                    <select class="custom-select text-muted" id="college" name="college"
+                                        style="height: 3.5rem; padding-left: 30px;" required>
+                                        <option value="">Choose College</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="branch">Branch : <sup>*</sup></label>
+                                <div class="col-md-9">
+                                    <select class="custom-select text-muted" id="branch" name="branch"
+                                        style="height: 3.5rem; padding-left: 30px;" required>
+                                        <option value="">Choose Branch</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
-    <footer class="foi-footer text-white">
-        <div class="container">
-            <div class="row footer-content">
-                <div class="col-xl-6 col-lg-7 col-md-8">
-                    <h2 class="mb-0">Do you want to know more or just have a question? write to us.</h2>
-                </div>
-                <div class="col-md-4 col-lg-5 col-xl-6 py-3 py-md-0 d-md-flex align-items-center justify-content-end">
-                    <a href="contact.html" class="btn btn-danger btn-lg">Contact form</a>
-                </div>
-            </div>
-            <div class="row footer-widget-area">
-                <div class="col-md-3">
-                    <div class="py-3">
-                        <img src="assets/images/logo-white.svg" alt="FOI">
                     </div>
-                    <p class="font-os font-weight-semibold mb3">Get our mobile app</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="password">Password : <sup>*</sup></label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        placeholder="Password" required minlength="8">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="ugc">Upload UGC : <sup>*</sup></label>
+                                <div class="col-md-9">
+                                    <input type="file" class="form-control" id="ugc" name="ugc" placeholder="UGC"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 form-group mt-3">
+                            <label for="nochapter">Subjects & Experience : <sup>*</sup></label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" id="nochapter" name="nochapter"
+                                placeholder="Enter The Number Of Subjects" required>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-outline-dark mt-1 mx-5" value="set"
+                                onclick="generate()">Enter</button>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="k"></div>
+                        </div>
+                    </div>
                     <div>
-                        <button class="btn btn-app-download mr-2"><img src="assets/images/ios.svg" alt="App store"></button>
-                        <button class="btn btn-app-download"><img src="assets/images/android.svg" alt="play store"></button>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-primary btn-auth-submit" type="submit">Sign Up</button>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 mt-3 mt-md-0">
-                    <nav>
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Account</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">My tasks</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Edit profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Activity</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-3 mt-3 mt-md-0">
-                    <nav>
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Careers <span class="badge badge-pill badge-secondary ml-3">Hiring</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Shop with us</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-3 mt-3 mt-md-0">
-                    <p>
-                        &copy; foi. 2020 <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer" class="text-reset">BootstrapDash</a>.
+                </form>
+                <div class="text-center">
+                    <p class="mb-0">
+                        Already Have An Account ?
+                        <a href="login.html" class="text-dark font-weight-bold ">Log In</a>
                     </p>
-                    <p>All rights reserved.</p>
-                    <nav class="social-menu">
-                        <a href="#!"><img src="assets/images/facebook.svg" alt="facebook"></a>
-                        <a href="#!"><img src="assets/images/instagram.svg" alt="instagram"></a>
-                        <a href="#!"><img src="assets/images/twitter.svg" alt="twitter"></a>
-                        <a href="#!"><img src="assets/images/youtube.svg" alt="youtube"></a>
-                    </nav>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+
+
+
+
     <script src="assets/vendors/jquery/jquery.min.js"></script>
     <script src="assets/vendors/popper.js/popper.min.js"></script>
     <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+
+        let k = document.getElementById("k");
+
+        function generate() {
+
+
+
+            var a = parseInt(document.getElementById("nochapter").value);
+
+            var ch = document.getElementById("ch");
+
+            let div = ``;
+
+            for (i = 0; i < a; i++) {
+
+                div = div + `<div class="col-md-12 d-flex">
+                                <div class="col-md-6 m-1">
+                                    <select class="custom-select col-md-12 text-muted" id="subjects" name="subjects" required>
+                                        <option value="">Choose Subjects</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 m-1">
+                                    <input type="text" class="form-control col-md-12 text-muted" style="height:2.5rem;" id="" name=""
+                                    placeholder="Enter The Years Of Experience" required>
+                                </div> 
+                        </div>`;
+
+            }
+
+            k.innerHTML = div;
+
+        }
+
+    </script>
 </body>
 
 </html>

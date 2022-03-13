@@ -14,6 +14,9 @@ import Login from './routes/user';
 import Register from './routes/register';
 import Questions from './routes/questions';
 import Admin from './routes/admin';
+import Moderator from './routes/moderator'
+import Faculty from './routes/faculty'
+
 
 // Schemas
 import { UserModel } from './models/user';
@@ -56,6 +59,8 @@ app.use('/login', Login);
 app.use('/register', Register);
 app.use('/questions',Questions);
 app.use('/admin',Admin);
+app.use('/moderator',Moderator);
+app.use('/faculty',Faculty);
 
 
 app.listen(process.env.PORT, () =>

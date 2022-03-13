@@ -72,4 +72,14 @@ Router.get('/moderator',(req,res)=>{
 })
 
 
+Router.get('/branchs',(req,res)=>{
+    res.render('adminBranch')
+})
+
+
+Router.get('/subjects',(req,res)=>{
+    res.render('adminSubject')
+})
+
+
 export default Router;

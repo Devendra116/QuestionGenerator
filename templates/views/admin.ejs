@@ -1,322 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>SIH Admin</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="/dashboard/vendors/typicons.font/font/typicons.css" />
+    <link rel="stylesheet" href="/dashboard/vendors/css/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/dashboard/css/vertical-layout-light/style.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="/dashboard/images/favicon.png" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>CelestialUI Admin</title>
-  <!-- base:css -->
-  <link rel="stylesheet" href="./dashboard/vendors/typicons.font/font/typicons.css">
-  <link rel="stylesheet" href="./dashboard/vendors/css/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="./dashboard/css/vertical-layout-light/style.css">
-  <!-- endinject -->
-  <link rel="icon" type="image/x-icon" href="assets/images/Q.ico">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-<body>
-  <div class="container-scroller">
-    <!-- partial:../../partials/_navbar.html -->
+    <link rel="icon" type="image/x-icon" href="assets/images/Q.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+
+    <!-- Test -->
+
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css"
+    />
     
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper" style="padding-top:0; min-height: 100vh;">
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- end -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container-scroller">
       
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <div class="d-flex sidebar-profile">
-              <div class="sidebar-profile-name">
-                <p class="sidebar-designation">Welcome</p>
-                <p class="sidebar-name">ADMIN</p>
+      <div class="container-fluid page-body-wrapper" style="padding-top:0; min-height: 100vh;">
+        
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <div class="d-flex sidebar-profile">
+                <div class="sidebar-profile-name">
+                  <p class="sidebar-designation">Welcome</p>
+                  <p class="sidebar-name">ADMIN</p>
+                </div>
+                <button
+            class="navbar-toggler navbar-toggler align-self-center d-lg-flex transition-btn"
+            type="button"
+            style="color: aliceblue;margin-top: 0.85rem;"
+            data-toggle="minimize"
+            id="hbtn"
+            style="transform: translateX(8.5rem);"
+          >
+            <span class="typcn typcn-th-menu"></span>
+          </button>
               </div>
-              <button
-          class="navbar-toggler navbar-toggler align-self-center d-lg-flex transition-btn"
-          type="button"
-          style="color: aliceblue;margin-top: 0.85rem;"
-          data-toggle="minimize"
-          id="hbtn"
-          style="transform: translateX(8.5rem);"
-        >
-          <span class="typcn typcn-th-menu"></span>
-        </button>
+
+              <p class="sidebar-menu-title">Dash menu</p>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="typcn typcn-home menu-icon"></i>
+                <span class="menu-title">Home</span>
+                
+              </a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title"
+                  >Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/college">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">College Details</span>
+                
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/faculty">
+                <i class="typcn typcn-user-outline menu-icon"></i>
+                <span class="menu-title">Faculty Details</span>
+                
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/moderator">
+                <i class="typcn typcn-user menu-icon"></i>
+                <span class="menu-title">Moderators Details</span>
+                
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/questions">
+                <i class="typcn typcn-database menu-icon"></i>
+                <span class="menu-title">Validated Questions</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/branchs">
+                <i class="typcn typcn-document-delete menu-icon"></i>
+                <span class="menu-title">Branches</span>
+                
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/subjects">
+                <i class="typcn typcn-document menu-icon"></i>
+                <span class="menu-title">Subjects</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        <!-- partial main page -->
+        <div class="main-panel">
+          <div class="content-wrapper flex" style="padding-top: 3rem;">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="mb-0 font-weight-bold" style="padding-bottom: 1rem;border-bottom: 2px solid #6206a8;">ADMIN DASHBOARD</h2>
+                
+              </div>
             </div>
-
-            <p class="sidebar-menu-title">Dash menu</p>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">
-              <i class="typcn typcn-home menu-icon"></i>
-              <span class="menu-title">Home</span>
-              
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./admin.html">
-              <i class="typcn typcn-device-desktop menu-icon"></i>
-              <span class="menu-title"
-                >Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./college.html">
-              <i class="typcn typcn-briefcase menu-icon"></i>
-              <span class="menu-title">College Details</span>
-              
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./faculty.html">
-              <i class="typcn typcn-user-outline menu-icon"></i>
-              <span class="menu-title">Faculty Details</span>
-              
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./moderator.html">
-              <i class="typcn typcn-user menu-icon"></i>
-              <span class="menu-title">Moderators Details</span>
-              
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./validated-questions.html">
-              <i class="typcn typcn-database menu-icon"></i>
-              <span class="menu-title">Validated Questions</span>
-              
-            </a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="./branch.html">
-              <i class="typcn typcn-document-delete menu-icon"></i>
-              <span class="menu-title">Branches</span>
-              
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./subject.html">
-              <i class="typcn typcn-document menu-icon"></i>
-              <span class="menu-title">Subjects</span>
-              
-            </a>
-          </li>
-          
-        </ul>
-      </nav>
-
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="row" >
-            <div class="col-sm-12" style="display: flex;justify-content: space-between;padding-bottom: 0.75rem;">
-              <h1 class="mb-0 font-weight-bold" style="padding-top:0.75rem;display: flex;">College Details</h1>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add College</button>
-
-              <!-- Modal Form -->
-
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content p-5">
-                      <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLongTitle">Add College</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                          <form action="questions.html" method="POST">  
-                              
-                              
-                              
-                              <div class="row" style="padding-top: 1rem;">
-                                <div class="form-group col-md-2">
-                                  <label for="question">Enter University Name : <sup>*</sup></label>
-                                </div>
-                                <div class="col-md-10">
-                                  <input type="text" class="form-control" id="question" name="question" placeholder="University Name" required>
-                                </div>
-                              </div>
-
-                              <div class="row" style="padding-top: 1rem;">
-                                <div class="form-group col-md-2">
-                                  <label for="question">Enter College Name : <sup>*</sup></label>
-                                </div>
-                                <div class="col-md-10">
-                                  <input type="text" class="form-control" id="question" name="question" placeholder="College Name" required>
-                                </div>
-                              </div>
-                              
-                              
-                      
-                              <div class="text-center" style="padding-top: 1rem;">
-                                <p class="form-footer-text">* Your Submissions Will Be Supervised By The Experts.</p>
-                              </div>
-                          </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+            <div class="row margin-card-top1" style="padding-top: 0.5rem;">
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i class="fa fa-question font-large-2 float-left"></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3><%=approved_question%></h3>
+                          <span>Approved Questions</span>
+                        </div>
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
-
-
-              <!-- Modal Form End -->
-
-
-            </div>
-            
-          </div>
-          <div class="row" style="padding-top: 1rem;">
-            
-            <div class="col-lg-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <!-- <div class="row">
-                    <div class="col-md-10">
-                      <h4 class="card-title col-lg-4">College Details</h4>
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i
+                            class="fa fa-question-circle font-large-2 float-left"
+                          ></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3>pending question count</h3>
+                          <span>Pending Questions</span>
+                        </div>
+                      </div>
                     </div>
-
-                    <div class="col-md-2">
-                      <button type="button" class="btn btn-primary" style="align-content: center;">Add College</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i
+                            class="fa fa-graduation-cap font-large-2 float-left"
+                          ></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3><%=total_ques%></h3>
+                          <span>Total Questions</span>
+                        </div>
+                      </div>
                     </div>
-                  </div> -->
-                  <!-- <p class="card-description">
-                    Add class <code>.table-striped</code>
-                  </p> -->
-                  <div class="table-responsive">
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th style="font-weight: bold;">
-                            Sr No.
-                          </th>
-                          <th  style="font-weight: bold;">
-                            Name
-                          </th>
-                          
-                          <th  style="font-weight: bold;">
-                            No. of Faculties
-                          </th>
-                          <th  style="font-weight: bold;">
-                            No. of Moderators
-                          </th>
-                          <th  style="font-weight: bold;">
-                            Delete
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <h5>num</h5>
-                          </td>
-                          <td>
-                            <h5>Sample</h5>
-                          </td>
-                          <td>
-                            <h5>Sample</h5>
-                          </td>
-                          
-                          <td>
-                            <h5>Sample</h5>
-                          </td>
-                          <td>
-                            <button type="button" class="btn btn-primary btn-sm btn-danger ">Delete</button>
-                          </td>
-
-
-                        </tr>
-                        <tr>
-                          <td>
-                            <h5>num</h5>
-                          </td>
-                          
-                          <td>
-                            <h5>Sample</h5>
-                          </td>
-                          <td>
-                            <h5>Sample</h5>
-                          </td>
-                          <td>
-                            <h5>Sample</h5>
-                          </td>
-                          <td>
-                            <button type="button" class="btn btn-primary btn-sm btn-danger ">Delete</button>
-                          </td>
-                        </tr>
-                        
-                      </tbody>
-                    </table>
                   </div>
                 </div>
               </div>
             </div>
-           
+            <div class="row margin-card-top">
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i class="fa fa-user font-large-2 float-left"></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3><%=total_faculty%></h3>
+                          <span>Our Faculties</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i class="fa fa-id-badge font-large-2 float-left"></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3><%=total_moderator%></h3>
+                          <span>Our Moderators</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i class="fa fa-book font-large-2 float-left"></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3><%=totalbranch%></h3>
+                          <span>No. of Branches</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row margin-card-top">
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i class="fa fa-code font-large-2 float-left"></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3><%=total_subject%></h3>
+                          <span>No. of Subjects</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i
+                            class="fa fa-graduation-cap font-large-2 float-left"
+                          ></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3><%=total_college%></h3>
+                          <span>No. of Colleges</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="card shadow-lg ">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="align-self-center">
+                          <i class="fa fa-database font-large-2 float-left"></i>
+                        </div>
+                        <div class="media-body text-right">
+                          <h3><%=totalchapter%></h3>
+                          <span>No. of Chapters</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="dashboard-btn">
+                <button
+                  type="button"
+                  class="btn"
+                  style="background-color: #6206a8; color: white"
+                >
+                  Generate Question Paper
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-12 grid-margin stretch-card">
-            
-          </div>
-          <div class="col-lg-12 stretch-card">
-           
-          </div>
-          
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+
+          <!-- partial -->
         </div>
+        <!-- main-panel ends -->
       </div>
-      <!-- content-wrapper ends -->
-      <!-- partial:../../partials/_footer.html -->
-      <!-- <footer class="footer">
-          <!-- <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
-                href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com</a> 2020</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a
-                href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from
-              Bootstrapdash.com</span>
-          </div> -->
-      </footer> 
-      <!-- partial -->
+      <!-- page-body-wrapper ends -->
     </div>
-    <!-- main-panel ends -->
-  </div>
-  <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
-  <!-- base:js -->
-  <script src="./dashboard/vendors/js/vendor.bundle.base.js"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <!-- End plugin js for this page-->
-  <!-- inject:js -->
-  <script src="./dashboard/js/off-canvas.js"></script>
-  <script src="./dashboard/js/hoverable-collapse.js"></script>
-  <script src="./dashboard/js/template.js"></script>
-  <script src="./dashboard/js/settings.js"></script>
-  <script src="./dashboard/js/todolist.js"></script>
-  <script>
-    let counter =0;
-    let hamburgerbtn = document.getElementById("hbtn")
-    window.onload = () => {
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="/dashboard/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="/dashboard/js/off-canvas.js"></script>
+    <script src="/dashboard/js/hoverable-collapse.js"></script>
+    <script src="/dashboard/js/template.js"></script>
+    <script src="/dashboard/js/settings.js"></script>
+    <script src="/dashboard/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="/dashboard/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="/dashboard/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="/dashboard/js/dashboard.js"></script>
+    <script>
+      let counter =0;
+      let hamburgerbtn = document.getElementById("hbtn")
+      window.onload = () => {
           hamburgerbtn.style.transform = "translateX(8.5rem)"
         }
-    hamburgerbtn.addEventListener('click',() => {
-      if(counter == 0){
-        hamburgerbtn.style.transform = "translateX(-0.5rem)"
-        counter =1;
-      }
-      else{
-        hamburgerbtn.style.transform = "translateX(8.5rem)"
-        counter =0;
-      }
-    })
-  </script>
-  <!-- endinject -->
-  <!-- plugin js for this page -->
-  <!-- End plugin js for this page -->
-  <!-- Custom js for this page-->
-  <!-- End custom js for this page-->
-</body>
-
+      hamburgerbtn.addEventListener('click',() => {
+        
+        if(counter == 0){
+          hamburgerbtn.style.transform = "translateX(-0.5rem)"
+          counter =1;
+        }
+        else{
+          hamburgerbtn.style.transform = "translateX(8.5rem)"
+          counter =0;
+        }
+      })
+    </script>
+    <!-- End custom js for this page-->
+  </body>
 </html>

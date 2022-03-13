@@ -19,7 +19,6 @@
 <body>
   <div class="container-scroller">
     
-   
     <div class="container-fluid page-body-wrapper" style="padding-top:0; min-height: 100vh;">
       
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -104,20 +103,95 @@
           
         </ul>
       </nav>
+
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-          <div class="row" >
+          <div class="row">
             <div class="col-sm-12" style="display: flex;justify-content: space-between;padding-bottom: 1rem;">
-              <h1 class="mb-0 font-weight-bold" style="padding-top:0.75rem;display: flex;">Validated Questions</h1>
-              
-            </div>           
+              <h1 class="mb-0 font-weight-bold" style="padding-top:0.75rem;display: flex;">Subject Details</h1>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Subject</button>
+
+<!-- Modal Form -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-5">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Add Subject</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="questions.html" method="POST">  
+                
+                
+                
+                <div class="row" style="padding-top: 1rem;">
+                  <div class="form-group col-md-2">
+                    <label for="question">Enter University Name : <sup>*</sup></label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="question" name="question" placeholder="University Name" required>
+                  </div>
+                </div>
+
+                <div class="row" style="padding-top: 1rem;">
+                  <div class="form-group col-md-2">
+                    <label for="question">Enter College Name : <sup>*</sup></label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="question" name="question" placeholder="College Name" required>
+                  </div>
+                </div>
+
+                <div class="row" style="padding-top: 1rem;">
+                  <div class="form-group col-md-2">
+                    <label for="question">Enter Branch Name : <sup>*</sup></label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="question" name="question" placeholder="Branch Name" required>
+                  </div>
+                </div>
+
+                <div class="row" style="padding-top: 1rem;">
+                  <div class="form-group col-md-2">
+                    <label for="question">Enter Subject Name : <sup>*</sup></label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="question" name="question" placeholder="Subject Name" required>
+                  </div>
+                </div>
+                
+                
+        
+                <div class="text-center" style="padding-top: 1rem;">
+                  <p class="form-footer-text">* Your Submissions Will Be Supervised By The Experts.</p>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Modal Form End -->
+
+            </div>
+            
           </div>
           <div class="row">
+
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  
+
+                 
                   <div class="table-responsive">
                     <table class="table table-striped">
                       <thead>
@@ -126,51 +200,68 @@
                             Sr No.
                           </th>
                           <th style="font-weight: bold;">
-                            Question
-                          </th >
-                          <th style="font-weight: bold;">
-                            Branch
-                          </th>
-                          <th style="font-weight: bold;">
-                            Subject
+                            Subject Name
                           </th>
 
-                          
+                          <th style="font-weight: bold;">
+                            No. of Faculties
+                          </th>
+                          <th style="font-weight: bold;">
+                            No. of Moderators
+                          </th>
+                          <th style="font-weight: bold;">
+                            No. of Questions
+                          </th>
                           <th style="font-weight: bold;">
                             Delete
                           </th>
                         </tr>
                       </thead>
                       <tbody>
-                        <% questiondata.forEach(function(data){ %>
                         <tr>
                           <td>
                             <h5>num</h5>
                           </td>
                           <td>
-                            <select class="form-control form-control-lg" id="exampleFormControlSelect1">
-                              <option><h5><%=data.question %></h5></option>
-                              <% data.options.forEach(function(opt){ %>
-                                <option  style="background-color : aquamarine;" ><h5 > * <%=opt %></h5></option>
-                            
-                            <% }) %>
-                          </select>
+                            <h5>Sample</h5>
                           </td>
                           <td>
-                            <h5><%=data.branch %></h5>
+                            <h5>Sample</h5>
+                          </td>
+                          <td>
+                            <h5>Sample</h5>
                           </td>
 
                           <td>
-                            <h5><%=data.subject %></h5>
+                            <h5>Sample</h5>
                           </td>
+                          <td>
+                            <button type="button" class="btn btn-primary btn-sm btn-danger ">Delete</button>
                           </td>
-                          
 
+
+                        </tr>
+                        <tr>
+                          <td>
+                            <h5>num</h5>
+                          </td>
+
+                          <td>
+                            <h5>Sample</h5>
+                          </td>
+                          <td>
+                            <h5>Sample</h5>
+                          </td>
+                          <td>
+                            <h5>Sample</h5>
+                          </td>
+                          <td>
+                            <h5>Sample</h5>
+                          </td>
                           <td>
                             <button type="button" class="btn btn-primary btn-sm btn-danger ">Delete</button>
                           </td>
                         </tr>
-                        <% }) %>
 
                       </tbody>
                     </table>
@@ -178,33 +269,33 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 grid-margin stretch-card">
 
-            </div>
-            <div class="col-lg-12 grid-margin stretch-card">
-
-            </div>
-            <div class="col-lg-12 stretch-card">
-
-            </div>
           </div>
+          <div class="col-lg-12 grid-margin stretch-card">
+
+          </div>
+          <div class="col-lg-12 stretch-card">
+
+          </div>
+          
         </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:../../partials/_footer.html -->
-        <!-- <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+      </div>
+      <!-- content-wrapper ends -->
+      <!-- partial:../../partials/_footer.html -->
+      <!-- <footer class="footer">
+          <!-- <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
                 href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com</a> 2020</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a
                 href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from
               Bootstrapdash.com</span>
           </div> -->
-        <!-- </footer> --> 
-        <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
+      </footer>
+      <!-- partial -->
     </div>
-    <!-- page-body-wrapper ends -->
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
   <!-- base:js -->
