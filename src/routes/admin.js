@@ -43,7 +43,7 @@ Router.get('/',async(req,res)=>{
 
 
 
-    res.render('adminDashboard',{total_ques:total_ques,approved_question:approved_question,
+    res.render('admin',{total_ques:total_ques,approved_question:approved_question,
         total_college:total_college,total_faculty:total_faculty,total_moderator:total_moderator,
         total_subject:total_subject,totalchapter:totalchapter,totalbranch:totalbranch })
 })

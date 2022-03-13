@@ -11125,6 +11125,23 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(222, 117, 6, 0.5);
 }
 
+.btn-primary-new{
+  color: white;
+  background-color: #6206a8;
+}
+
+.btn-danger-new {
+  color: #fff;
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+
+.btn-success-new {
+  color: #fff;
+  background-color: #17c964;
+  border-color: #17c964;
+}
+
 .btn-danger {
   color: #fff;
   background-color: #ff0000;
