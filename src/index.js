@@ -12,14 +12,15 @@ import ConnectDB from './db/connection';
 // Routes
 import Login from './routes/user';
 import Register from './routes/register';
-import Questions from './routes/questions'
+import Questions from './routes/questions';
+import Admin from './routes/admin';
 
 // Schemas
 import { UserModel } from './models/user';
 import { QuestionModel } from './models/question';
 
 // Setting Paths
-const static_path = path.join(__dirname, '../assets');
+const static_path = path.join(__dirname, '../public');
 const templates_path = path.join(__dirname, '../templates/views');
 
 app.use(cors());
@@ -54,6 +55,8 @@ app.get('/', async (req, res) => {
 app.use('/login', Login);
 app.use('/register', Register);
 app.use('/questions',Questions);
+app.use('/admin',Admin);
+
 
 app.listen(process.env.PORT, () =>
   ConnectDB()

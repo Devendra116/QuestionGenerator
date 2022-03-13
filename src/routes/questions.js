@@ -12,7 +12,7 @@ Router.use(cookieParser())
 // Access: Public
 // Method : GET
 Router.get('/',(req, res)=>{
-  res.render('questions',{questionData:""}); 
+  res.render('questions',{ questionData:{}}); 
 })
 
 // Route: /questions
@@ -47,7 +47,7 @@ Router.post('/',isAuth, async(req, res)=>{
       university:"Mumbai",
       branch:"INFT",
      })
-     console.log(questions)
+    //  console.log(questions)
      await questions.save();
      res.json({message:"Data added to the database"})
     }
