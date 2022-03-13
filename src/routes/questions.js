@@ -25,9 +25,8 @@ Router.get('/update:qid',async(req, res)=>{
   const {qid} = req.params;
   const questionData=await QuestionModel.findById(qid)
 
-  console.log(questionData)
 
-  res.render('questions',{questionData:questionData}); 
+  res.render('questionUpdate',{questionData:questionData,qid:qid}); 
 })
 
 
@@ -47,7 +46,7 @@ Router.post('/',isAuth, async(req, res)=>{
       university:"Mumbai",
       branch:"INFT",
      })
-     console.log(questions)
+    //  console.log(questions)
      await questions.save();
      res.json({message:"Data added to the database"})
     }
@@ -57,6 +56,37 @@ Router.post('/',isAuth, async(req, res)=>{
   }
 })
 
+
+// Route: /question/update:qid
+// Description : Update Questions
+// params: qid
+// Access: Public
+// Method : POST
+
+Router.post('/update:qid',isAuth, async(req, res)=>{
+  try {
+     const qid = req.params.qid;
+     const {subject,chapter,diff,question,option1,option2,option3,option4,correct} = req.body;
+     const questions = await QuestionModel.findByIdAndUpdate(qid,{
+      $set:{
+      question:question,
+      options:[option1,option2,option3,option4],
+      correct_options:[correct],
+      difficulty:diff,
+      subject:subject,
+      chapter:chapter,
+      university:"Mumbai",
+      branch:"INFT",
+     }})
+    //  console.log(questions)
+     await questions.save();
+     res.json({message:"Data added to the database"})
+    }
+    catch (error) {
+     console.log(`you got a error ${error.message}`);
+     res.json({"error":error.message});
+  }
+})
 
 
 export default Router;

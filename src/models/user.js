@@ -16,7 +16,7 @@ const UserSchema=new mongoose.Schema({
     document:{type:String,required:true},
     isExpert:{type:Boolean,default:false},
     isVarified:{type:Boolean,default:false},
-    branch:{type:String,required:true}
+    branch:{type:String,required:true},
 },{
     timestamps:true,
 });
