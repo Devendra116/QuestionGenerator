@@ -21,6 +21,7 @@ Router.use(cookieParser())
 Router.get('/',async(req,res)=>{
     const total_ques= await QuestionModel.find().count()
     const approved_question= await QuestionModel.find({isValid:{'$eq':true}}).count()
+    const pending_question= await QuestionModel.find({isValid:{'$eq':false}}).count()
     const total_college= await CollegeModel.find().count()
     const total_faculty= await UserModel.find({isVarified:{'$eq':true}}).count()
     const total_moderator= await UserModel.find({isExpert:{'$eq':true}}).count()
@@ -45,12 +46,12 @@ Router.get('/',async(req,res)=>{
 
     res.render('admin',{total_ques:total_ques,approved_question:approved_question,
         total_college:total_college,total_faculty:total_faculty,total_moderator:total_moderator,
-        total_subject:total_subject,totalchapter:totalchapter,totalbranch:totalbranch })
+        total_subject:total_subject,totalchapter:totalchapter,totalbranch:totalbranch,pending_question:pending_question })
 })
 
 
 Router.get('/college',async(req,res)=>{
-    const collegedata= await CollegeModel.find()
+    const collegedata= await UserModel.aggregate()
 
     res.render('adminCollege',{collegedata:collegedata})
 })
