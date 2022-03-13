@@ -25,11 +25,27 @@ Router.get('/',async(req,res)=>{
     const total_faculty= await UserModel.find({isVarified:{'$eq':true}}).count()
     const total_moderator= await UserModel.find({isExpert:{'$eq':true}}).count()
     const total_subject= await SubjectModel.find().count()
+    
+
+   const total_chapter=await SubjectModel.aggregate([{$project:{chapter:1}}])
+   const chapters=total_chapter.map(elem=>{
+       return elem.chapter
+   })
+   const totalchapter=[ ... new Set([].concat.apply([],chapters))].length
+
+   const total_branch=await CollegeModel.aggregate([{$project:{branch:1}}])
+   const branches=total_branch.map(elem=>{
+       return elem.branch
+   })
+   const totalbranch=[ ... new Set([].concat.apply([],branches))].length
+
+   
+
 
 
     res.render('adminDashboard',{total_ques:total_ques,approved_question:approved_question,
         total_college:total_college,total_faculty:total_faculty,total_moderator:total_moderator,
-        total_subject:total_subject })
+        total_subject:total_subject,totalchapter:totalchapter,totalbranch:totalbranch })
 })
 
 
