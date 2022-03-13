@@ -1,9 +1,11 @@
-import express from "express";
+import express, { json } from "express";
 import { QuestionModel } from "../models/question";
 import isAuth from "../isauth";
 import jwt from "jsonwebtoken";
 import jwt_decode from 'jwt-decode';
 import cookieParser from "cookie-parser";
+import { UserModel } from "../models/user";
+import { SubjectModel } from "../models/subject";
 
 const Router = express.Router();
 Router.use(cookieParser())
@@ -12,12 +14,19 @@ Router.use(cookieParser())
 // params: none
 // Access: Public
 // Method : GET
-Router.get('/',(req, res)=>{
+Router.get('/',async(req, res)=>{
   const encrypteduserdata= req.cookies.jwt;
   const userdata=jwt_decode(encrypteduserdata)
-console.log(userdata.user)
+  const userid = JSON.parse(JSON.stringify(userdata.user))
+  const fromdatabase = await UserModel.findById(userid)
 
-  res.render('questions'); 
+  const subjects = fromdatabase.subject.map(elem=>{
+    return elem.subject_name
+  })
+  
+
+
+  res.render('questions',{subjects:subjects}); 
 })
 
 // Route: /questions
@@ -33,7 +42,6 @@ Router.get('/update:qid',async(req, res)=>{
 
   res.render('questionUpdate',{questionData:questionData,qid:qid}); 
 })
-
 
 
 
@@ -93,5 +101,15 @@ Router.post('/update:qid',isAuth, async(req, res)=>{
   }
 })
 
+// Route: /questions/chapter:subject_name
+// Description : Update Questions
+// params: subject_name
+// Access: Public
+// Method : GET
+Router.get("/chapter:subject_name",async(req,res)=> {
+  const {subject_name} = req.params;
+  const subject_data = await SubjectModel.find({subject_name});
+  res.json(subject_data)
+})
 
 export default Router;
