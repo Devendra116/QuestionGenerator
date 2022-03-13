@@ -19,7 +19,7 @@
           Correct Answer Using
           The Radio Button Provided.</h6>
         <div class="border border-dark rounded-lg p-4 shadow-lg bg-white">
-          <form action="/questions" method="POST">
+          <form action="/questions/update<%= qid %>" method="POST">
             <div class="row">
               <div class="form-group col-md-3">
                 <label for="subject-name">Name Of The Subject : <sup>*</sup></label>
@@ -158,6 +158,36 @@
       }
     })
     
+
+      const subject = document.getElementById('subject-name');
+      subject.value = '<%= questionData.subject %>'
+
+      const chapter = document.getElementById('chapter-name');
+      chapter.value = '<%= questionData.chapter %>'
+
+      const question = document.getElementById('question');
+      question.value = '<%= questionData.question %>'
+
+      for (let i = 1; i <= 3; i++) {
+        if (document.getElementById(`${i}`).value === '<%= questionData.difficulty %>') {
+          document.getElementById(`${i}`).checked = true
+        }
+      }
+      document.getElementById('option1').value = '<%= questionData.options[0] %>'
+      document.getElementById('option2').value = '<%= questionData.options[1] %>'
+      document.getElementById('option3').value = '<%= questionData.options[2] %>'
+      document.getElementById('option4').value = '<%= questionData.options[3] %>'
+
+      for (let i = 1; i <= 4; i++) {
+        if (document.getElementById(`option${i}`).value === '<%= questionData.correct_options[0] %>') {
+          document.getElementById(`correct${i}`).checked = true
+        }
+      }
+     
+
+
+
+
 
   </script>
 </body>
