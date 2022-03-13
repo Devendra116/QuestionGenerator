@@ -2,6 +2,7 @@ import express from "express";
 import { QuestionModel } from "../models/question";
 import isAuth from "../isauth";
 import jwt from "jsonwebtoken";
+import jwt_decode from 'jwt-decode';
 import cookieParser from "cookie-parser";
 
 const Router = express.Router();
@@ -12,6 +13,10 @@ Router.use(cookieParser())
 // Access: Public
 // Method : GET
 Router.get('/',(req, res)=>{
+  const encrypteduserdata= req.cookies.jwt;
+  const userdata=jwt_decode(encrypteduserdata)
+console.log(userdata.user)
+
   res.render('questions'); 
 })
 

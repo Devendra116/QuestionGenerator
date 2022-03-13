@@ -25,7 +25,7 @@ const UserSchema=new mongoose.Schema({
 
 // Statics
 UserSchema.methods.generateJwtToken = function () {
-    return jwt.sign({ user: this._id.toString() }, "Quesio8bit");
+    return jwt.sign({ user: this._id }, "Quesio8bit");
 };
 
 
