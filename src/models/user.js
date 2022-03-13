@@ -12,11 +12,11 @@ const UserSchema=new mongoose.Schema({
     phone:{type:Number},
     question_submited:[{type:mongoose.Types.ObjectId,ref:"questions"}],
     question_validated:[{type:mongoose.Types.ObjectId,ref:"questions"}],
-    subject:[{type:mongoose.Types.ObjectId,ref:"subjects"}],
-    document:{type:String,required:true},
+    subject:[{subject_name:String,yearofexp:Number}],
+    document:{type:String},
     isExpert:{type:Boolean,default:false},
     isVarified:{type:Boolean,default:false},
-    branch:{type:String,required:true},
+    branch:{type:String,required:true}
 },{
     timestamps:true,
 });

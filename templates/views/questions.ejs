@@ -26,11 +26,13 @@
               </div>
               <div class="form-group col-md-3">
                 <div class="input-group mb-3">
-                  <select class="custom-select" name="subject" id="subject-name" required>
+                  <select onchange="fetchChapter()" class="custom-select" name="subject" id="subject-name" required>
                     <option value="">Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <% subjects.forEach(function(data){%>
+                      <option value="<%= data %>">
+                        <%= data %>
+                      </option>
+                      <% }) %>
                   </select>
                 </div>
               </div>
@@ -41,9 +43,6 @@
                 <div class="input-group mb-3">
                   <select class="custom-select" id="chapter-name" name="chapter" required>
                     <option value="">Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
                   </select>
                 </div>
               </div>
@@ -157,22 +156,20 @@
         }
       }
     })
-    
-<<<<<<< HEAD
-    const subject = document.getElementById('subject-name');
-    subject.value = '<%= questionData.subject %>'
 
-    const chapter = document.getElementById('chapter-name');
-    chapter.value = '<%= questionData.chapter %>'
-    
-    for(let i = 1;i<=3;i++){
-      if(document.getElementById(`${i}`).value === '<%= questionData.difficulty %>'){
-        document.getElementById(`${i}`).checked = true
+    async function fetchChapter() {
+      const value = document.getElementById("subject-name").value;
+      console.log(value)
+      const chapterData =await fetch(`http://localhost:9000/questions/chapter${value}`).then(response => response.json()).then(data=> data[0].chapter)
+      // console.log(chapters)
+      const chapter = document.getElementById("chapter-name")
+      for(let i=0;i<chapterData.length;i++){
+          chapter.innerHTML+=`<option value=${chapterData[i]}>${chapterData[i]}</option>`
       }
     }
-=======
 
->>>>>>> dc4f0437caf50eb67dbf1119f200d5b5c1cd8c73
+
+
   </script>
 </body>
 
