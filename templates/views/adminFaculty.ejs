@@ -140,33 +140,29 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <%facultydata. %>
-                          <% %>
-
+                          <% facultydata.forEach(function(data){ %>
                           <tr>
                             <td>
                               <h5>num</h5>
                             </td>
                             <td>
-                              <h5>Sample</h5>
+                              <h5><%=data.name %></h5>
                             </td>
 
                             <td>
-                              <h5>Sample</h5>
+                              <h5><%=data.college %></h5>
                             </td>
                             <td>
-                              <h5>Sample</h5>
+                              <h5><%=data.branch %></h5>
                             </td>
                             <td>
                               <select
                                 class="form-control form-control-lg"
                                 id="exampleFormControlSelect1"
                               >
-                                <option>subject1</option>
-                                <option>subject2</option>
-                                <option>subject3</option>
-                                <option>subject4</option>
-                                <option>subject5</option>
+                              <% data.subject.forEach(function(sub){ %>
+                                <option><%=sub.subject_name %></option>
+                                <% }) %>
                               </select>
                             </td>
                             <td>
@@ -194,8 +190,7 @@
                               </button>
                             </td>
                           </tr>
-
-
+                          <% }) %>
                           <tr>
                             <td>
                               <h5>num</h5>
@@ -797,7 +792,7 @@
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <!-- <footer class="footer">
-          <!-- <div class="d-sm-flex justify-content-center justify-content-sm-between">
+         <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
                 href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com</a> 2020</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a
@@ -805,7 +800,7 @@
               Bootstrapdash.com</span>
           </div> -->
           <!-- </footer> -->
-          -->
+       
           <!-- partial -->
         </div>
         <!-- main-panel ends -->
