@@ -2,24 +2,25 @@
 <html lang="en">
 
 <head>
-
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Quesio | Subjects</title>
-
+  <title>CelestialUI Admin</title>
+  <!-- base:css -->
   <link rel="stylesheet" href="/dashboard/vendors/typicons.font/font/typicons.css">
   <link rel="stylesheet" href="/dashboard/vendors/css/vendor.bundle.base.css">
-
+  <!-- endinject -->
+  <!-- inject:css -->
   <link rel="stylesheet" href="/dashboard/css/vertical-layout-light/style.css">
-
+  <!-- endinject -->
   <link rel="icon" type="image/x-icon" href="assets/images/Q.ico">
 </head>
 
 <body>
   <div class="container-scroller">
-
+    
     <div class="container-fluid page-body-wrapper" style="padding-top:0; min-height: 100vh;">
-
+      
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
@@ -28,11 +29,16 @@
                 <p class="sidebar-designation">Welcome</p>
                 <p class="sidebar-name">ADMIN</p>
               </div>
-              <button class="navbar-toggler navbar-toggler align-self-center d-lg-flex transition-btn" type="button"
-                style="color: aliceblue;margin-top: 0.85rem;" data-toggle="minimize" id="hbtn"
-                style="transform: translateX(8.5rem);">
-                <span class="typcn typcn-th-menu"></span>
-              </button>
+              <button
+          class="navbar-toggler navbar-toggler align-self-center d-lg-flex transition-btn"
+          type="button"
+          style="color: aliceblue;margin-top: 0.85rem;"
+          data-toggle="minimize"
+          id="hbtn"
+          style="transform: translateX(8.5rem);"
+        >
+          <span class="typcn typcn-th-menu"></span>
+        </button>
             </div>
 
             <p class="sidebar-menu-title">Dash menu</p>
@@ -41,147 +47,143 @@
             <a class="nav-link" href="/">
               <i class="typcn typcn-home menu-icon"></i>
               <span class="menu-title">Home</span>
-
-            </a>
+              
+            </a> 
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin">
               <i class="typcn typcn-device-desktop menu-icon"></i>
-              <span class="menu-title">Dashboard
+              <span class="menu-title"
+                >Dashboard
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin/college">
               <i class="typcn typcn-briefcase menu-icon"></i>
               <span class="menu-title">College Details</span>
-
+              
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin/faculty">
               <i class="typcn typcn-user-outline menu-icon"></i>
               <span class="menu-title">Faculty Details</span>
-
+              
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin/moderator">
               <i class="typcn typcn-user menu-icon"></i>
               <span class="menu-title">Moderators Details</span>
-
+              
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin/questions">
               <i class="typcn typcn-database menu-icon"></i>
               <span class="menu-title">Validated Questions</span>
-
+              
             </a>
           </li>
-
+          
           <li class="nav-item">
             <a class="nav-link" href="/admin/branchs">
               <i class="typcn typcn-document-delete menu-icon"></i>
               <span class="menu-title">Branches</span>
-
+              
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin/subjects">
               <i class="typcn typcn-document menu-icon"></i>
               <span class="menu-title">Subjects</span>
-
+              
             </a>
           </li>
-
+          
         </ul>
       </nav>
 
-
+      <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
             <div class="col-sm-12" style="display: flex;justify-content: space-between;padding-bottom: 1rem;">
               <h1 class="mb-0 font-weight-bold" style="padding-top:0.75rem;display: flex;">Subject Details</h1>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add
-                Subject</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Subject</button>
 
+<!-- Modal Form -->
 
-
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content p-5">
-                    <div class="modal-header">
-                      <h2 class="modal-title" id="exampleModalLongTitle">Add Subject</h2>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <form action="questions.html" method="POST">
-
-
-
-                        <div class="row" style="padding-top: 1rem;">
-                          <div class="form-group col-md-2">
-                            <label for="question">Enter University Name : <sup>*</sup></label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="text" class="form-control" id="question" name="question"
-                              placeholder="University Name" required>
-                          </div>
-                        </div>
-
-                        <div class="row" style="padding-top: 1rem;">
-                          <div class="form-group col-md-2">
-                            <label for="question">Enter College Name : <sup>*</sup></label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="text" class="form-control" id="question" name="question"
-                              placeholder="College Name" required>
-                          </div>
-                        </div>
-
-                        <div class="row" style="padding-top: 1rem;">
-                          <div class="form-group col-md-2">
-                            <label for="question">Enter Branch Name : <sup>*</sup></label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="text" class="form-control" id="question" name="question"
-                              placeholder="Branch Name" required>
-                          </div>
-                        </div>
-
-                        <div class="row" style="padding-top: 1rem;">
-                          <div class="form-group col-md-2">
-                            <label for="question">Enter Subject Name : <sup>*</sup></label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="text" class="form-control" id="question" name="question"
-                              placeholder="Subject Name" required>
-                          </div>
-                        </div>
-
-
-
-                        <div class="text-center" style="padding-top: 1rem;">
-                          <p class="form-footer-text">* Your Submissions Will Be Supervised By The Experts.</p>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
-                    </div>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-5">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Add Subject</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="questions.html" method="POST">  
+                
+                
+                
+                <div class="row" style="padding-top: 1rem;">
+                  <div class="form-group col-md-2">
+                    <label for="question">Enter University Name : <sup>*</sup></label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="question" name="question" placeholder="University Name" required>
                   </div>
                 </div>
-              </div>
+
+                <div class="row" style="padding-top: 1rem;">
+                  <div class="form-group col-md-2">
+                    <label for="question">Enter College Name : <sup>*</sup></label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="question" name="question" placeholder="College Name" required>
+                  </div>
+                </div>
+
+                <div class="row" style="padding-top: 1rem;">
+                  <div class="form-group col-md-2">
+                    <label for="question">Enter Branch Name : <sup>*</sup></label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="question" name="question" placeholder="Branch Name" required>
+                  </div>
+                </div>
+
+                <div class="row" style="padding-top: 1rem;">
+                  <div class="form-group col-md-2">
+                    <label for="question">Enter Subject Name : <sup>*</sup></label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="question" name="question" placeholder="Subject Name" required>
+                  </div>
+                </div>
+                
+                
+        
+                <div class="text-center" style="padding-top: 1rem;">
+                  <p class="form-footer-text">* Your Submissions Will Be Supervised By The Experts.</p>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+        </div>
+      </div>
+  </div>
+</div>
 
 
+<!-- Modal Form End -->
 
             </div>
-
+            
           </div>
           <div class="row">
 
@@ -189,7 +191,7 @@
               <div class="card">
                 <div class="card-body">
 
-
+                 
                   <div class="table-responsive">
                     <table class="table table-striped">
                       <thead>
@@ -275,43 +277,60 @@
           <div class="col-lg-12 stretch-card">
 
           </div>
-
+          
         </div>
       </div>
-
+      <!-- content-wrapper ends -->
+      <!-- partial:../../partials/_footer.html -->
+      <!-- <footer class="footer">
+          <!-- <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
+                href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com</a> 2020</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a
+                href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from
+              Bootstrapdash.com</span>
+          </div> -->
       </footer>
-
+      <!-- partial -->
     </div>
-
+    <!-- main-panel ends -->
   </div>
-
+  <!-- page-body-wrapper ends -->
   </div>
-
+  <!-- container-scroller -->
+  <!-- base:js -->
   <script src="/dashboard/vendors/js/vendor.bundle.base.js"></script>
-
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
   <script src="/dashboard/js/off-canvas.js"></script>
   <script src="/dashboard/js/hoverable-collapse.js"></script>
   <script src="/dashboard/js/template.js"></script>
   <script src="/dashboard/js/settings.js"></script>
   <script src="/dashboard/js/todolist.js"></script>
   <script>
-    let counter = 0;
+    let counter =0;
     let hamburgerbtn = document.getElementById("hbtn")
     window.onload = () => {
-      hamburgerbtn.style.transform = "translateX(8.5rem)"
-    }
-    hamburgerbtn.addEventListener('click', () => {
-      if (counter == 0) {
+          hamburgerbtn.style.transform = "translateX(8.5rem)"
+        }
+    hamburgerbtn.addEventListener('click',() => {
+      if(counter == 0){
         hamburgerbtn.style.transform = "translateX(-0.5rem)"
-        counter = 1;
+        counter =1;
       }
-      else {
+      else{
         hamburgerbtn.style.transform = "translateX(8.5rem)"
-        counter = 0;
+        counter =0;
       }
     })
   </script>
-
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <!-- End custom js for this page-->
 </body>
 
 </html>
