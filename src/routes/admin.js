@@ -94,11 +94,16 @@ res.render('adminCollege', { collegefaculty, collegeexpert })
 
 
 Router.get('/faculty',async (req, res) => {
-    const facultydata= await UserModel.find({'isVarified':true})
+    const facultydata= await UserModel.find({'isVarified':true,'isExpert':false})
 
     res.render('adminFaculty',{facultydata})
 })
 
+Router.get('/moderator',async (req, res) => {
+    const moderatordata= await UserModel.find({'isVarified':true,'isExpert':true})
+
+    res.render('adminModerator',{moderatordata})
+})
 
 Router.get('/questions', async (req, res) => {
     const questiondata = await QuestionModel.find()
