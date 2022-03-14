@@ -210,17 +210,21 @@
                         </tr>
                       </thead>
                       <tbody>
+                        <% collegefaculty.forEach(faculty=>{ %>
                         <tr>
                           <td>
                             <h5>num</h5>
                           </td>
                           <td>
-                            <h5>Sample</h5>
+                            <h5><%=faculty._id %></h5>
                           </td>
+                          <% collegeexpert.forEach(moderator=>{ %>
+                            <%if(faculty._id == moderator._id){ %>
                           <td>
-                            <h5>Sample</h5>
+                            <h5><%=moderator._id %></h5>
                           </td>
-                          
+                          <%} %>
+                          <%}) %>
                           <td>
                             <h5>Sample</h5>
                           </td>
@@ -230,6 +234,8 @@
 
 
                         </tr>
+                        <%}) %>
+
                         <tr>
                           <td>
                             <h5>num</h5>

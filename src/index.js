@@ -16,6 +16,8 @@ import Questions from './routes/questions';
 import Admin from './routes/admin';
 import Moderator from './routes/moderator'
 import Faculty from './routes/faculty'
+import Logout from './routes/logout';
+import QBGenerate from './routes/qbgenerate'
 
 
 // Schemas
@@ -61,7 +63,8 @@ app.use('/questions',Questions);
 app.use('/admin',Admin);
 app.use('/moderator',Moderator);
 app.use('/faculty',Faculty);
-
+app.use('/logout',Logout);
+app.use('/qbgenerate',QBGenerate);
 
 app.listen(process.env.PORT, () =>
   ConnectDB()

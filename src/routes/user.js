@@ -19,7 +19,7 @@ Router.get('/as',isAuth,(req,res)=>{
     res.render('home')
 })
 
-// Route: /user/login
+// Route: /login
 // Description : Rendering login page
 // params: none
 // Access: Public
@@ -29,7 +29,7 @@ Router.get('/',(req, res)=>{
   
 })
 
-// Route: /user/login
+// Route: /login
 // Description : Loging in user
 // params: none
 // Access: Public
@@ -50,5 +50,6 @@ Router.post('/',async(req, res)=>{
       res.json({"error":error.message});
   }
 })
+
 
 export default Router;
