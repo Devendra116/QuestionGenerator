@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Submit Questions</title>
+  <title>Quesio | Update Submissions</title>
   <link rel="stylesheet" href="/assets/vendors/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
@@ -27,8 +27,10 @@
               <div class="form-group col-md-3">
                 <div class="input-group mb-3">
                   <select class="custom-select" name="subject" id="subject-name" required>
-                    <option selected disabled  value="<%= questionData.subject %>"> <%= questionData.subject %></option>
-                    
+                    <option selected disabled value="<%= questionData.subject %>">
+                      <%= questionData.subject %>
+                    </option>
+
                   </select>
                 </div>
               </div>
@@ -38,8 +40,10 @@
               <div class="form-group col-md-3">
                 <div class="input-group mb-3">
                   <select class="custom-select" id="chapter-name" name="chapter" required>
-                    <option selected disabled  value="<%= questionData.chapter %>"> <%= questionData.chapter %></option>
-                    
+                    <option selected disabled value="<%= questionData.chapter %>">
+                      <%= questionData.chapter %>
+                    </option>
+
                   </select>
                 </div>
               </div>
@@ -153,37 +157,32 @@
         }
       }
     })
-    
 
-      const subject = document.getElementById('subject-name');
-      subject.value = '<%= questionData.subject %>'
 
-      const chapter = document.getElementById('chapter-name');
-      chapter.value = '<%= questionData.chapter %>'
+    const subject = document.getElementById('subject-name');
+    subject.value = '<%= questionData.subject %>'
 
-      const question = document.getElementById('question');
-      question.value = '<%= questionData.question %>'
+    const chapter = document.getElementById('chapter-name');
+    chapter.value = '<%= questionData.chapter %>'
 
-      for (let i = 1; i <= 3; i++) {
-        if (document.getElementById(`${i}`).value === '<%= questionData.difficulty %>') {
-          document.getElementById(`${i}`).checked = true
-        }
+    const question = document.getElementById('question');
+    question.value = '<%= questionData.question %>'
+
+    for (let i = 1; i <= 3; i++) {
+      if (document.getElementById(`${i}`).value === '<%= questionData.difficulty %>') {
+        document.getElementById(`${i}`).checked = true
       }
-      document.getElementById('option1').value = '<%= questionData.options[0] %>'
-      document.getElementById('option2').value = '<%= questionData.options[1] %>'
-      document.getElementById('option3').value = '<%= questionData.options[2] %>'
-      document.getElementById('option4').value = '<%= questionData.options[3] %>'
+    }
+    document.getElementById('option1').value = '<%= questionData.options[0] %>'
+    document.getElementById('option2').value = '<%= questionData.options[1] %>'
+    document.getElementById('option3').value = '<%= questionData.options[2] %>'
+    document.getElementById('option4').value = '<%= questionData.options[3] %>'
 
-      for (let i = 1; i <= 4; i++) {
-        if (document.getElementById(`option${i}`).value === '<%= questionData.correct_options[0] %>') {
-          document.getElementById(`correct${i}`).checked = true
-        }
+    for (let i = 1; i <= 4; i++) {
+      if (document.getElementById(`option${i}`).value === '<%= questionData.correct_options[0] %>') {
+        document.getElementById(`correct${i}`).checked = true
       }
-     
-
-
-
-
+    }
 
   </script>
 </body>

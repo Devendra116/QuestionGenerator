@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Submit Questions</title>
+  <title>Quesio | Submit Questions</title>
   <link rel="stylesheet" href="/assets/vendors/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body style="background-color: #6206a8;">
+<body style="background-image: linear-gradient(45deg, #c395e5,  #6206a8);">
   <main>
     <div class="container">
       <section class="contact-form-wrapper">
@@ -161,7 +161,6 @@
       const value = document.getElementById("subject-name").value;
       console.log(value)
       const chapterData =await fetch(`http://localhost:9000/questions/chapter${value}`).then(response => response.json()).then(data=> data[0].chapter)
-      // console.log(chapters)
       const chapter = document.getElementById("chapter-name")
       for(let i=0;i<chapterData.length;i++){
           chapter.innerHTML+=`<option value=${chapterData[i]}>${chapterData[i]}</option>`
